@@ -1,0 +1,15 @@
+#!/bin/bash
+
+osascript -e 'tell application "Terminal"
+  set miniaturized of window 1 to true 
+end tell'
+
+while true
+do
+	sleep 600; # 10 mins
+	osascript -e 'display notification "time for eyes break!" with title "eyesBreaker" sound name "" '
+  say 'time for eyesbreak'
+	sleep 10; 
+	osascript -e 'display notification "Done!!" with title "eyesBreaker" sound name "" '
+  say 'done'
+done
